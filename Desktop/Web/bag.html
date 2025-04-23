@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/bag.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <title>Bag</title>
 </head>
 <body>
@@ -16,9 +18,12 @@
           <p class="header__desk">Электросамокат</p>
         </div>
         <div class="header__card">
-          <img class="header__arrow header__arrow-left" src="/logo_and_pictures/arrow-left.svg" alt="#">
-          <img class="header__pic" src="/logo_and_pictures/slider1.1.jpg" alt="#">
-          <img class="header__arrow header__arrow-right"src="/logo_and_pictures/arrow-right.svg" alt="#">
+          <img class="header__arrow header__arrow-left" class="swiper-button-prev" src="/logo_and_pictures/arrow-left.svg" alt="#">
+          <img class="header__pic" class="swiper-slide" src="/logo_and_pictures/slider1.1.jpg" alt="#">
+          <img class="header__pic" class="swiper-slide" src="/logo_and_pictures/slider1.2.jpg" alt="#">
+          <img class="header__pic" class="swiper-slide" src="/logo_and_pictures/slider1.3.jpg" alt="#">
+          <img class="header__pic" class="swiper-slide" src="/logo_and_pictures/slider1.4.jpg" alt="#">
+          <img class="header__arrow header__arrow-right" class="swiper-button-next" src="/logo_and_pictures/arrow-right.svg" alt="#">
         </div>
       </li>
       <li class="header__list">
@@ -49,3 +54,18 @@
   </header>
 </body>
 </html>
+
+<script>
+  const swiper = new Swiper('.swiper', {
+    // Настройки Swiper
+    loop: true, // Бесконечная прокрутка
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true, // Делает пагинацию кликабельной
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+</script>
