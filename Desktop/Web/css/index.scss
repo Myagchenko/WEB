@@ -82,10 +82,10 @@ body {
 
 .main__fixed-menu{
   max-width: 350px;
-  height: 500px;
+  // height: 500px;
   padding: 30px;
   background-color: #A68B8B30;
-  height: 235vh;
+  // height: 235vh;
 }
 
 .main__catalog{
@@ -208,6 +208,7 @@ body {
   display: flex;
   padding: 20px 0px 20px 20px;
   background-color: #EEE9E9;
+  border-top: 4px solid #790000;
 }
 
 .footer__info{

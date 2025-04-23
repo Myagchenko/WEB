@@ -1,13 +1,71 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/bag.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <title>Bag</title>
+
+  <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+
+  <style>
+    .image-slider {
+      position: relative;
+      max-height: 1000px;
+      height: 100%;
+      width: 600px;
+      margin: 0 auto;
+    }
+
+    .image-slider__buttons {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    .image-slider__left {
+      display: flex;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 50%;
+      z-index: 1;
+      left: 0;
+      cursor: pointer;
+      transform: translateY(-50%);
+    }
+
+    .image-slider__right {
+      position: absolute;
+      display: flex;
+      width: 20px;
+      z-index: 1;
+      height: 20px;
+      top: 50%;
+      right: 0;
+      cursor: pointer;
+      transform: translateY(-50%);
+    }
+
+    .image-slider__slides-wrapper {
+      width: 600px;
+      height: 700px;
+    }
+
+    .image-slider__slide {
+    }
+
+    .image-slider__slide img {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
 </head>
+
 <body>
   <header class="header">
     <ul class="header__wrap">
@@ -17,17 +75,32 @@
           <p class="header__opacity">Главная / Каталог /</p>
           <p class="header__desk">Электросамокат</p>
         </div>
-        <div class="header__card">
+        <!-- <div class="header__card">
           <img class="header__arrow header__arrow-left" class="swiper-button-prev" src="/logo_and_pictures/arrow-left.svg" alt="#">
           <img class="header__pic" class="swiper-slide" src="/logo_and_pictures/slider1.1.jpg" alt="#">
           <img class="header__pic" class="swiper-slide" src="/logo_and_pictures/slider1.2.jpg" alt="#">
           <img class="header__pic" class="swiper-slide" src="/logo_and_pictures/slider1.3.jpg" alt="#">
           <img class="header__pic" class="swiper-slide" src="/logo_and_pictures/slider1.4.jpg" alt="#">
           <img class="header__arrow header__arrow-right" class="swiper-button-next" src="/logo_and_pictures/arrow-right.svg" alt="#">
+        </div> -->
+
+        <div class="image-slider">
+          <div class="image-slider__buttons">
+            <div class="image-slider image-slider__left"><img src="/logo_and_pictures/arrow-left.svg" alt="#"></div>
+            <div class="image-slider image-slider__right"><img src="/logo_and_pictures/arrow-right.svg" alt="#"></div>
+
+            <div class="image-slider__slides-wrapper">
+              <div class="image-slider__slide"><img src="/logo_and_pictures/slider1.1.jpg" alt="#"></div>
+              <div class="image-slider__slide"><img src="/logo_and_pictures/slider1.1.jpg" alt="#"></div>
+              <div class="image-slider__slide"><img src="/logo_and_pictures/slider1.1.jpg" alt="#"></div>
+            </div>
+          </div>
         </div>
       </li>
+
+
       <li class="header__list">
-        <h1 class="header__title">Hi Boy <br/>S2 Pro</h1>
+        <h1 class="header__title">Hi Boy <br />S2 Pro</h1>
         <h2 class="header__title-mini">Характеристики</h2>
         <p class="header__desk">Мотор: 350W</p>
         <p class="header__desk">Скорость: до 25 км/ч</p>
@@ -50,22 +123,22 @@
 
       </li>
     </ul>
-    
   </header>
-</body>
-</html>
 
-<script>
-  const swiper = new Swiper('.swiper', {
-    // Настройки Swiper
-    loop: true, // Бесконечная прокрутка
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true, // Делает пагинацию кликабельной
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-});
-</script>
+
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <script>
+    const prev = $('.image-slider__left')
+    const next = $('.image-slider__right')
+
+    $('.image-slider__slides-wrapper').slick({
+      prevArrow: prev,
+      nextArrow: next
+    })
+  </script>
+</body>
+
+</html>
