@@ -1,0 +1,58 @@
+@font-face {
+  font-family: "Inter-Regular";
+  src: url(../fonts/Inter-Regular.woff) format("woff");
+}
+.header__section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.header__info-opacity {
+  opacity: 0.5;
+  margin-left: 50px;
+}
+
+.header__info {
+  margin-left: 3px;
+}
+
+.content__section {
+  margin-left: 72px;
+  font-family: "Inter-Regular";
+  color: #370F0F;
+}
+
+.content__title {
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 15px;
+  font-family: "Inter-Regular";
+  color: #370F0F;
+}
+
+.content__desk {
+  font-size: 16px;
+  max-width: 700px;
+  color: #370F0F;
+  font-family: "Inter-Regular";
+  line-height: 25px;
+}
+
+.content__sertificate {
+  display: flex;
+}
+
+.content__title-mini {
+  font-size: 20px;
+  line-height: 5px;
+  color: #370F0F;
+  font-family: "Inter-Regular";
+}
+
+.content__desk-mini {
+  font-size: 16px;
+  color: #370F0F;
+  font-family: "Inter-Regular";
+}
